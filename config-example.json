@@ -1,0 +1,11 @@
+{
+  "token": "meow",
+  "permissions": {
+    "write": {
+      "blacklisted": false,
+      "people": [
+        "put discord user ids here"
+      ]
+    }
+  }
+}

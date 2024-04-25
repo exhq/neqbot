@@ -28,9 +28,15 @@ class CommandHandler {
     }
   }
 
-  
+  class Evalcommand {
+    execute(args, e) {
+      e.reply(eval(e.content.substring(e.content.indexOf(' ') + 1)).toString())
+    }
+  }
   const commandHandler = new CommandHandler();
   commandHandler.registerCommand('write', new WriteCommand());
+  commandHandler.registerCommand('e', new Evalcommand());
+  commandHandler.registerCommand('eval', new Evalcommand());
 
   module.exports = commandHandler;
 
